@@ -1,0 +1,81 @@
+@import "photographer";
+@import "reset";
+
+body {
+    font-family: "DM Sans", sans-serif;
+    margin: 0;
+}
+
+.header {
+    display: flex;
+    flex-direction: row; 
+    justify-content: space-between;
+    align-items: center;
+    height: 90px;
+    padding: 42px 100px;
+
+    &__title {
+        color: $font-secondary-color;
+        font-size: 36px;
+        font-weight: 400;
+    }
+    &__logo {
+        height: 50px;
+    }
+}
+
+
+.main {
+    & a {
+        text-decoration: none;
+    }
+    &__photographe {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 80px;
+        margin: 90px 0 110px 0 ;
+        text-align: center;
+        &__title {
+            color: $font-primary-color;
+            font-size: 36px;
+            font-weight: 400;
+            margin-top: 20px;
+            line-height: 46px;
+        }
+        &__place {
+            color: $font-secondary-color;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 17px;
+        }
+        &__description {
+            color: #000;
+            font-size: 10px;
+            font-weight: 400;
+            line-height: 13px;
+            margin: 3px 0;
+        }
+        &__price {
+            color: #757575;
+            font-size: 9px;
+            font-weight: 400;
+            line-height: 12px;
+        }
+        & article {
+            justify-self: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            & img {
+                height: 200px;
+                width: 200px;
+            }
+        }
+    }
+}
+
+
+
+
+
