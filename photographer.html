@@ -10,155 +10,59 @@
   </head>
   <body id="body">
     <header class="header">
+      <a href="index.html">
       <img src="assets/images/logo.png" class="header__logo" />
+      </a>
     </header>
     <main id="main">
       <!-- header main -->
-      <section class="main__header">
-        <article class="main__header__info">
-          <h1 class="main__header__info__title">Mimi Keel</h1>
-          <p class="main__header__info__place">London, UK</p>
-          <p class="main__header__info__subtitle">Voir le beau dans le quotidien</p>
-        </article>
-        <section class="main__header__modal">
-          <button class="main__header__modal__btn">Contactez-moi</button>
-          <span class="main__header__modal__overlay"></span>
-          <div class="main__header__modal__box">
-            <header class="main__header__modal__box__header">
-              <h2 class="main__header__modal__box__header__title">Contactez-moi Mimi Keel</h2>
-              <img class="main__header__modal__box__header__close" src="assets/icons/close.svg" onclick="closeModal()" />
-            </header>
-            <form class="main__header__modal__box__form">
-              <div>
-                <label for="firstname">Prénom</label>
-                <input type="text" name="firstname" id="fistname" minlength="2" required/>
-              </div>
-              <div>
-                <label for="lastname">Nom</label>
-                <input type="text" name="lastname" id="lastname" minlength="2" required/>
-              </div>
-              <div>
-                <label for="email">Prénom</label>
-                <input type="email" name="email" id="email" required/>
-              </div>
-              <div>
-                <label for="message">Votre message</label>
-                <textarea  name="message" id="message" rows="5" cols="33" required></textarea>
-              </div>
-              <button class="main__header__modal__box__form__button">Envoyer</button>
-            </form>
-          </div>
-        </section>
-        <img class="main__header__img" src="assets/photographers/account.png" alt="Photo de profil" width="200" height="200">
+      <section class="main__header"> 
       </section>
-
-
       
       <!-- filter main -->
       <section class="main__filter">
         <p class="main__filter__text">Trier par</p>
-    
         <div class="main__filter__select">
-            <div class="main__filter__select__btn">
-                <span class="main__filter__select__btn__text">Select your option</span>
-                <i class="fa-solid fa-chevron-down"></i>
-            </div>
-            <ul class="main__filter__select__options">
-                <li class="main__filter__select__options__option">
-                    <span class="main__filter__select__options__option__text">Popularité</span>
-                </li>
-                <li class="main__filter__select__options__option">
-                    <span class="main__filter__select__options__option__text">Date</span>
-                </li>
-                <li class="main__filter__select__options__option">
-                    <span class="main__filter__select__options__option__text">Titre</span>
-                </li>
-            </ul>
         </div>
-    
-    </section>
+      </section>
       
 
       <!-- galerie main -->
       <section class="main__galerie">
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
-        <article class="main__galerie__project">
-          <img class="main__galerie__project__img" src="assets/images/81e467028a7b1fbd7f86fa8f8c789692.jpeg" alt="Photo du projet 1" width="350" height="300">
-          <div class="main__galerie__project__info">
-            <h2 class="main__galerie__project__info__title">Arc-en-cie</h2>
-            <div class="main__galerie__project__info__heart">
-              <p class="main__galerie__project__info__heart__number">11</p>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </article>
       </section>
 
       <!-- stats main -->
       <section class="main__stats">
-        <article class="main__stats__likes">
-          <p class="main__stats__likes__number">297 081</p>
-          <i class="fa-solid fa-heart"></i>
-        </article>
-        <article class="main__stats__price">
-          <p class="main__stats__price__number">300€ / jour</p>
-        </article>
       </section>
 
     </main>
-    
-    <script src="/scripts/pages/photographer.js"></script>
-    <script src="/scripts/utils/contactForm.js"></script>
-    <script src="/scripts/utils/select.js"></script>
-    <script src="/scripts/utils/modal.js"></script>
+     
+    <!-- Factories -->
+ 
+     <!-- Models -->
+     <script src="/scripts/models/Photographer.js"></script>
+     <script src="/scripts/models/Media.js"></script>
+ 
+     <!-- Templates -->
+     <script src="/scripts/templates/contactForm.js"></script>
+     <script src="/scripts/templates/modal.js"></script>
+     <script src="/scripts/templates/select.js"></script>
+     <script src="/scripts/templates/PhotographerCard.js"></script>
+     <script src="/scripts/templates/MediaCard.js"></script>
+     <script src="/scripts/templates/PhotographerHeader.js"></script>
+     <script src="/scripts/templates/SorterForm.js"></script>
+     <script src="/scripts/templates/wishlist.js"></script>
+     <script src="/scripts/templates/Lightbox.js"></script>
+
+     <!-- Api -->
+     <script src="/scripts/api/Api.js"></script>
+
+     <!-- Observer -->
+    <script src="/scripts/wishlist/Subject.js"></script>
+    <script src="/scripts/wishlist/Counter.js"></script>
+
+     <!-- Entry point -->
+     <script src="/scripts/AppPhotographer.js "></script>
+
   </body>
 </html>

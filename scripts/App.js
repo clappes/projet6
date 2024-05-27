@@ -1,10 +1,12 @@
 class App {
     constructor() {
-        this.$photographersWrapper = document.querySelector('.main')
+        this.$photographersWrapper = document.querySelector('.main__photographe')
         this.photographersApi = new PhotographerApi('/data/photographers.json')
+        
     }
 
     async main() {
+
         // Ici je récupère mes photographes de mon fichier photographers.json
         const photographersData = await this.photographersApi.getPhotographers()
 
@@ -15,7 +17,7 @@ class App {
             const Template = new PhotographerCard(photographer)
             this.$photographersWrapper.appendChild(
                 Template.createPhotographerCard()
-            )        
+            )  
         })    
     }
 }

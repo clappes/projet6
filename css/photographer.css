@@ -52,6 +52,9 @@
 .main__header__img {
   align-self: center;
   justify-self: center;
+  border-radius: 50%;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .main__header__modal {
   display: flex;
@@ -286,6 +289,24 @@
   line-height: 31px;
   margin-right: 5px;
 }
+.main__galerie__project__info__heart__wish-btn {
+  background-color: rgba(255, 255, 255, 0.7);
+  border-radius: 8px;
+  cursor: pointer;
+  height: 20px;
+  width: 20px;
+}
+.main__galerie__project__info__heart__wish-btn path {
+  fill: transparent;
+  stroke-width: 6px;
+  stroke: #000;
+  transition: 0.4s;
+}
+.main__galerie__project__info__heart__wish-btn.wished path {
+  fill: #901C1C;
+  stroke-width: 6px;
+  stroke: #901C1C;
+}
 .main__stats {
   display: flex;
   width: 376px;
@@ -321,8 +342,85 @@
   color: #000;
   font-weight: 500;
 }
+.main__lightbox {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(255, 255, 255);
+  z-index: 10;
+  animation: lightboxIn 0.5s;
+}
+.main__lightbox__next, .main__lightbox__prev {
+  border: none;
+  background: url(../assets/icons/arrow.svg) center center/16px 28px no-repeat;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 50%;
+  right: 100px;
+  margin-top: -14px;
+  z-index: 11;
+  opacity: 0.9;
+  text-indent: 3000px;
+  cursor: pointer;
+}
+.main__lightbox__next:hover, .main__lightbox__prev:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+.main__lightbox__prev {
+  right: auto;
+  left: 100px;
+  transform: rotate(180deg);
+}
+.main__lightbox__close {
+  width: 30px;
+  height: 30px;
+  border: none;
+  background: url(../assets/icons/close.svg) center center/100% 100% no-repeat transparent;
+  position: fixed;
+  text-indent: 3000px;
+  top: 110px;
+  right: 120px;
+  opacity: 0.9;
+  z-index: 12;
+  cursor: pointer;
+}
+.main__lightbox__close:hover {
+  opacity: 1;
+  transition: 0.3s;
+}
+.main__lightbox__container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  margin: 0 50px;
+}
+.main__lightbox__container img {
+  max-width: 1050px;
+  max-height: 900px;
+  height: auto;
+  animation: lightboxIn 0.5s;
+}
+.main__lightbox__container__title {
+  display: flex;
+  justify-self: flex-start;
+}
 
 .fa-heart {
   color: #901C1C;
   font-size: 18px;
+}
+
+@keyframes lightboxIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }/*# sourceMappingURL=photographer.css.map */

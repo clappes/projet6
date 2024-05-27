@@ -35,6 +35,12 @@ body {
         gap: 80px;
         margin: 90px 0 110px 0 ;
         text-align: center;
+        & img {
+            height: 200px;
+            width: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+        }
         &__title {
             color: $font-primary-color;
             font-size: 36px;
@@ -67,10 +73,6 @@ body {
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            & img {
-                height: 200px;
-                width: 200px;
-            }
         }
     }
 }
