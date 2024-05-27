@@ -5,8 +5,6 @@ class WhishListCounter {
         
         this._count = 0
         this._$wishCount = document.querySelector('.main__stats__likes__number')
-        this._$wishCountMedia = document.querySelector('.main__galerie__project__info__heart__number')
-        console.log(this._$wishCountMedia)
     }
 
         
@@ -26,7 +24,6 @@ class WhishListCounter {
             throw "Unknow action"
         }
 
-        this._$wishCountMedia.innerHTML = this._count
         this._$wishCount.innerHTML = this._count
     }
 }
