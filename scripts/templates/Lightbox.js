@@ -44,7 +44,6 @@ class Lightbox {
         container.innerHTML = ''
         this.url = url
         this.alt = alt
-        console.log(this.url)
         if(this.url.indexOf('.mp4') !== -1) {
             container.appendChild(video)
             container.appendChild(titleMedia)
