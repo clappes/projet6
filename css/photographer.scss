@@ -409,13 +409,15 @@
             margin: 0 50px;
             & img {
                 max-width: 1050px;
-                max-height: 900px;
-                height: auto;
+                height: 712px;
                 animation: lightboxIn 0.5s;
             }
             &__title {
-                display: flex;
-                justify-self: flex-start;
+                color: #901C1C;
+                font-size: 24px;
+                font-weight: 400;
+                margin-top: 12px;
+                display: inline-block;
             }
         }
     }

@@ -402,13 +402,15 @@
 }
 .main__lightbox__container img {
   max-width: 1050px;
-  max-height: 900px;
-  height: auto;
+  height: 712px;
   animation: lightboxIn 0.5s;
 }
 .main__lightbox__container__title {
-  display: flex;
-  justify-self: flex-start;
+  color: #901C1C;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 12px;
+  display: inline-block;
 }
 
 .fa-heart {

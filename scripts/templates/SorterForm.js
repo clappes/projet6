@@ -54,14 +54,21 @@ class SorterForm {
         this.WhishListCounter = new WhishListCounter(photographerById, mediaById)
 
         this.WishlistSubject.subscribe(this.WhishListCounter)
-        sortedMedia.forEach(Media => {
-            const Template = new MediaCard(Media, this.WishlistSubject)
-            const TemplateCount = new Wishlist(photographerById, mediaById)
-            this.$mediaWrapper.appendChild(Template.createMediaCard())
-        })
+        sortedMedia
+            .map(media => new Media(media))
+            .forEach(Media => {
+                const Template = new MediaCard(Media, this.WishlistSubject)
+                const TemplateCount = new Wishlist(photographerById, mediaById)
+                this.$mediaWrapper.appendChild(Template.createMediaCard())
+            })
         Lightbox.init()
         
     }
+    keyHandler(e) {
+    if(e.keyCode === 13) {
+        return this.onChangeSorter()
+    }
+  }
 
     onChangeSorter() {
         const tab = this.$wrapper.querySelectorAll('.main__filter__select__options__option')
@@ -70,6 +77,12 @@ class SorterForm {
             item.addEventListener('click', e => {
                 const sorterValue = e.currentTarget.getAttribute('data-name')
                 self.sorterMedia(sorterValue)
+            })
+            item.addEventListener('keydown', e => {
+                if(e.key === 'Enter') {
+                    const sorterValue = e.currentTarget.getAttribute('data-name')
+                    self.sorterMedia(sorterValue)
+                }
             })
         })    
             
@@ -81,19 +94,19 @@ class SorterForm {
 
     render() {
         const sorterForm = `
-            <div class="main__filter__select__btn">
+            <div tabindex="0" aria-label="Menu déroulant du filtre" class="main__filter__select__btn">
                 <span class="main__filter__select__btn__text">Select your option</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
             <ul class="main__filter__select__options">
                 <li class="main__filter__select__options__option" data-name="popularite">
-                    <span class="main__filter__select__options__option__text">Popularité</span>
+                    <span  tabindex="0" class="main__filter__select__options__option__text">Popularité</span>
                 </li>
                 <li class="main__filter__select__options__option" data-name="date">
-                    <span class="main__filter__select__options__option__text">Date</span>
+                    <span  tabindex="0" class="main__filter__select__options__option__text">Date</span>
                 </li>
-                <li class="main__filter__select__options__option" data-name="titre">
-                    <span class="main__filter__select__options__option__text">Titre</span>
+                <li tabindex="2" class="main__filter__select__options__option" data-name="titre">
+                    <span tabindex="0" class="main__filter__select__options__option__text">Titre</span>
                 </li>
             </ul>
         `

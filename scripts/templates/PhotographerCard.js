@@ -8,7 +8,7 @@ class PhotographerCard {
 
         const photographerCard = `
         <a href="photographer.html?id=${this._photographer.id}">
-        <img alt="${this._photographer.portrait}" src="${this._photographer.portrait}"/>
+        <img alt="Portrait de ${this._photographer.name}" src="${this._photographer.portrait}"/>
         <h2 class="main__photographe__title">${this._photographer.name}</h2>
         </a>
         <article>

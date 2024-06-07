@@ -17,24 +17,24 @@ class PhotographerHeader {
           <div class="main__header__modal__box">
             <header class="main__header__modal__box__header">
               <h2 class="main__header__modal__box__header__title">Contactez-moi ${this._photographer.name}</h2>
-              <img class="main__header__modal__box__header__close" src="assets/icons/close.svg" onclick="closeModal()" />
+              <img tabindex="0" alt="Croix qui permet de fermer la page modale" class="main__header__modal__box__header__close" src="assets/icons/close.svg" onclick="closeModal()" onkeypress="closeModal()"/>
             </header>
             <form class="main__header__modal__box__form">
               <div>
                 <label for="firstname">Prénom</label>
-                <input type="text" name="firstname" id="fistname" minlength="2" required/>
+                <input type="text" name="Firstname" id="firstname" minlength="2" required/>
               </div>
               <div>
                 <label for="lastname">Nom</label>
-                <input type="text" name="lastname" id="lastname" minlength="2" required/>
+                <input type="text" name="Lastname" id="lastname" minlength="2" required/>
               </div>
-              <div>
-                <label for="email">Prénom</label>
-                <input type="email" name="email" id="email" required/>
+              <div> 
+                <label for="email">Email</label>
+                <input type="email" name="Email" id="email" required/>
               </div>
               <div>
                 <label for="message">Votre message</label>
-                <textarea  name="message" id="message" rows="5" cols="33" required></textarea>
+                <textarea  name="Message" id="message" rows="5" cols="33" required></textarea>
               </div>
               <button class="main__header__modal__box__form__button">Envoyer</button>
             </form>
