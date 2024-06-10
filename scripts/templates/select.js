@@ -1,9 +1,9 @@
 
 function select() {
     const optionMenu = document.querySelector(".main__filter__select")
-    selectBtn = document.querySelector(".main__filter__select__btn")
-    options = document.querySelectorAll(".main__filter__select__options__option")
-    sBtn_text = document.querySelector(".main__filter__select__btn__text")
+    const selectBtn = document.querySelector(".main__filter__select__btn")
+    const options = document.querySelectorAll(".main__filter__select__options__option")
+    const sBtn_text = document.querySelector(".main__filter__select__btn__text")
     selectBtn.addEventListener("click", () => optionMenu.classList.toggle("active"))
     selectBtn.addEventListener("keydown", (e) =>{
         if(e.key === 'Enter') {

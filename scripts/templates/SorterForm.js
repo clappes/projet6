@@ -98,7 +98,7 @@ class SorterForm {
                 <span class="main__filter__select__btn__text">Select your option</span>
                 <i class="fa-solid fa-chevron-down"></i>
             </div>
-            <ul class="main__filter__select__options">
+            <ul aria-hidden="true" class="main__filter__select__options">
                 <li class="main__filter__select__options__option" data-name="popularite">
                     <span  tabindex="0" class="main__filter__select__options__option__text">Popularité</span>
                 </li>

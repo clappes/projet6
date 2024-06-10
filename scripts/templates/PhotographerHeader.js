@@ -12,32 +12,34 @@ class PhotographerHeader {
           <p class="main__header__info__subtitle">${this._photographer.tagline}</p>
         </article>
         <section class="main__header__modal">
-          <button class="main__header__modal__btn" onclick="onClickModal()" >Contactez-moi</button>
+          <button type="button" aria-haspopup="dialog" aria-controls="dialog" aria-label="Bouton pour ouvrir le formulaire de contact" class="main__header__modal__btn">Contactez-moi</button>
           <span class="main__header__modal__overlay"></span>
-          <div class="main__header__modal__box">
+          <div class="c-dialog" id="dialog" role="dialog" aria-labelledby="dialog-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+            <div role="document" class="c-dialog__box">
             <header class="main__header__modal__box__header">
-              <h2 class="main__header__modal__box__header__title">Contactez-moi ${this._photographer.name}</h2>
-              <img tabindex="0" alt="Croix qui permet de fermer la page modale" class="main__header__modal__box__header__close" src="assets/icons/close.svg" onclick="closeModal()" onkeypress="closeModal()"/>
+              <h2 id="dialog-title" class="main__header__modal__box__header__title">Contactez-moi ${this._photographer.name}</h2>
+              <img tabindex="0" aria-label="Fermer" data-dismiss="dialog" alt="Croix qui permet de fermer la page modale" class="main__header__modal__box__header__close" src="assets/icons/close.svg"/>
             </header>
             <form class="main__header__modal__box__form">
-              <div>
+              <p>
                 <label for="firstname">Prénom</label>
                 <input type="text" name="Firstname" id="firstname" minlength="2" required/>
-              </div>
-              <div>
+              </p>
+              <p>
                 <label for="lastname">Nom</label>
                 <input type="text" name="Lastname" id="lastname" minlength="2" required/>
-              </div>
-              <div> 
+              </p>
+              <p> 
                 <label for="email">Email</label>
                 <input type="email" name="Email" id="email" required/>
-              </div>
-              <div>
+              </p>
+              <p>
                 <label for="message">Votre message</label>
                 <textarea  name="Message" id="message" rows="5" cols="33" required></textarea>
-              </div>
+              </p>
               <button class="main__header__modal__box__form__button">Envoyer</button>
             </form>
+            </div>
           </div>
         </section>
         <img class="main__header__img" src="/assets/photographers/${this._photographer.portrait}" alt="${this._photographer.portrait}" width="200" height="200">
