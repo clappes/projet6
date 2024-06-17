@@ -58,11 +58,10 @@ class Lightbox {
             image.src = url
             image.alt = alt    
         }
-        
-        setTimeout(() => {
-            const widthMedia = (container.firstChild.clientWidth + "px")
-            titleMedia.style.width = widthMedia
-          }, "1");
+         setTimeout(() => {
+             const widthMedia = (container.firstChild.clientWidth + "px")
+             titleMedia.style.width = widthMedia
+           }, "1");
         
 
     }

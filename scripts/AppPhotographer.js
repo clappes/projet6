@@ -50,7 +50,7 @@ class App {
                 )  
             })
         Lightbox.init() 
-              
+        modalClick()      
     }
 }
 

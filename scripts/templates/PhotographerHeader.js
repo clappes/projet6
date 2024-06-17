@@ -14,11 +14,11 @@ class PhotographerHeader {
         <section class="main__header__modal">
           <button type="button" aria-haspopup="dialog" aria-controls="dialog" aria-label="Bouton pour ouvrir le formulaire de contact" class="main__header__modal__btn">Contactez-moi</button>
           <span class="main__header__modal__overlay"></span>
-          <div class="c-dialog" id="dialog" role="dialog" aria-labelledby="dialog-title" aria-modal="true" aria-hidden="true" tabindex="-1">
-            <div role="document" class="c-dialog__box">
+          <div class="main__header__modal__dialog" id="dialog" role="dialog" aria-labelledby="dialog-title" aria-modal="true" aria-hidden="true" tabindex="-1">
+            <div role="document" class="main__header__modal__dialog__box">
             <header class="main__header__modal__box__header">
               <h2 id="dialog-title" class="main__header__modal__box__header__title">Contactez-moi ${this._photographer.name}</h2>
-              <img tabindex="0" aria-label="Fermer" data-dismiss="dialog" alt="Croix qui permet de fermer la page modale" class="main__header__modal__box__header__close" src="assets/icons/close.svg"/>
+              <img id="close-dialog" tabindex="0" aria-label="Fermer" data-dismiss="dialog" alt="Croix qui permet de fermer la page modale" class="main__header__modal__box__header__close" src="assets/icons/close.svg"/>
             </header>
             <form class="main__header__modal__box__form">
               <p>
